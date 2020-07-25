@@ -1,0 +1,129 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+header h1{
+	margin-top: 50px;
+	font-family: 'Roboto Slab',arial, serif;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-size: 1.5em;
+
+	
+}
+.table{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+}
+nav.table a.navlink{
+	text-decoration: none;
+	text-align: center;
+	padding: 2px;
+	color: #000;
+} 
+
+
+.navlink{
+		margin-right: 3%;
+	}
+.dropdownicon{
+		display: none;
+		color: black;
+		text-decoration: none;
+	}
+
+.section1{
+
+		margin-top: 100px;
+		background-color: #dee3ff;
+}
+
+
+div.subtitle{
+  	font-family: 'Roboto Slab',arial, serif;
+	text-align: center;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	font-size: 2em;
+	line-height: normal;
+}
+div.section1element{
+	text-align: center;
+}
+
+#callnow{
+	background-color: #d6db37;
+	text-decoration: none;
+	color: white;
+
+	text-transform: uppercase;
+	padding: 15px;
+	font-size: 1.8em;
+}
+#callnow:hover{
+	background-color: gray;
+}
+#plan{
+	font-size: 1.5em;
+	font-weight: 200;
+}
+div.section1element img {
+  max-width: 100%;
+  height: auto;
+}
+/*div.section1img{
+	 text-align: center;
+	 max-width: 100%; 
+     height: auto; 
+}*/
+
+.section2{
+
+	height: 100px;
+	width: 100%;
+	background-color: #d6c889;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 360px){
+	div.subtitle{
+	font-size: 1.5em;
+	line-height: normal;
+}
+	
+}
+
+@media screen and (max-width: 767px){
+	.navlink{
+		display: none;
+	}
+	.dropdownicon{
+		margin-top: 50px;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.responsive{
+		display: inline ;
+		float: none;
+	}
+
+	.responsive a.navlink{
+
+		display: block; 
+		text-align: center;
+	}
+}
