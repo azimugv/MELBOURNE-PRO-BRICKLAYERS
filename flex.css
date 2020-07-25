@@ -1,80 +1,197 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="flex.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
-</head>
-<body>
-	<header>
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+header h1{
+	margin-top: 50px;
+	font-family: 'Roboto Slab',arial, serif;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	font-size: 1.5em;
 
-		<h1>MELBOURNE   PRO BRICKLAYERS</h1>
-		<hr width="60%">
-		<nav class="table" id="dropdownclick">
-		
-			<a class="navlink" href="#Home">Home</a>
-		    <a class="navlink" href="#sub2">About Us</a>
-			<a class="navlink" href="#About"> Our Products</a>
-			<a class="navlink" href="#Contact">Contact</a>
-			<a class="navlink" href="#Contact">Our Services</a>
-			<a class="dropdownicon" href="javascript:void(0);" onclick = "dropdownmenu()" >&#9776</a>
-		</ul>
-	</nav>
-
-	</header>
-
-	<section class="section1">
-		<div class="subtitle">
-			<br><br>
-			<h2 id="sub1">WELCOME TO</h2>
-			<h2>MELBOURNE  PRO BRICKLAYERS</h2>
-		</div>
-		<div class="section1element">
-			<a id="callnow" href="">call now</a>
-				<p id="plan">Plans to build your dream</p>
-				<img src="image/s1.png" alt="section1 image">
-		</div>
-		
+	
+}
+.table{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+}
+nav.table a.navlink{
+	text-decoration: none;
+	text-align: center;
+	padding: 2px;
+	color: #000;
+} 
 
 
-	</section>
+.navlink{
+		margin-right: 3%;
+	}
+.dropdownicon{
+		display: none;
+		color: black;
+		text-decoration: none;
+	}
 
-	<section class="section2">
-		
-		<div class="left">
-			<div class="box">
+.section1{
 
-			<h2 id="sub2">ABOUT US</h2>
-			      <br><br>
-				<p id="about-us">If you're in need of some home improvement projects for your home or commercial space, consider working with Melbourne Bricklayers. For each of our services we have experienced professionals that will handle your project with detail and care. Let us know what you want, we’ll do our best to make it happen.</p>
-				<br><br>
-				<a class="learn" href="">Learn More</a>
-			
-			</div>
-		</div>
-		<div class="right">
-			<div class="img">
-			<img src="image/s2.PNG">
-			</div>
-		</div>
-			
-		
-				
-	</section>
+		margin-top: 100px;
+		background-color: #dee3ff;
+}
 
-		<script>
-		function dropdownmenu() {
-			var x = document.getElementById("dropdownclick");
-			if(x.className === "table"){
-				x.className += " responsive";
-			}
-			else{
-				x.className ="table";
-			}
-		}
-	</script>
-</body>
-</html>
 
+div.subtitle{
+  	font-family: 'Roboto Slab',arial, serif;
+	text-align: center;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	font-size: 2em;
+	line-height: normal;
+}
+div.section1element{
+	text-align: center;
+}
+
+#callnow{
+	background-color: #d6db37;
+	text-decoration: none;
+	color: white;
+
+	text-transform: uppercase;
+	padding: 15px;
+	font-size: 1.8em;
+}
+#callnow:hover{
+	background-color: gray;
+}
+#plan{
+	font-size: 1.5em;
+	font-weight: 200;
+}
+div.section1element img {
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.left{width: 50%;
+float: left;}
+.right{width: 50%;
+float: left;}
+
+.section2{
+	background-color: #d6c889;
+	 padding: 20px;
+	overflow: auto;
+}
+
+.box{
+	border: 0px;
+	background-color: white;
+	margin-left: 15%;
+	padding: 10px 20px 20px 20px;
+	height: 475px;
+  
+}
+#sub2{
+	font-family: 'Roboto Slab',arial, serif;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	font-size: 2em;
+	
+}
+#about-us{
+	font-size: 16px;
+	font-weight: 100;
+	line-height: normal;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+}
+.learn{
+	border: 1px solid black;
+	border-radius: 25px;
+	text-decoration: none;;
+	color: black;
+	padding: 10px;
+	font-size: 1.2em;
+}
+ a.learn:hover{
+	background-color: black;
+	color: white;
+}
+div.img{
+	text-align: center;
+}
+.section2 img {
+
+  max-width: 100%;
+  height: 475px;
+ padding-left: 20px;
+ padding-right: 2px;
+  
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 360px){
+	div.subtitle{
+	font-size: 1.5em;
+	line-height: normal;
+}
+	
+}
+
+@media screen and (max-width: 767px){
+	.navlink{
+		display: none;
+	}
+	.dropdownicon{
+		margin-top: 50px;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.responsive{
+		display: inline ;
+		float: none;
+	}
+
+	.responsive a.navlink{
+
+		display: block; 
+		text-align: center;
+	}
+	.box{
+	background-color:transparent;
+	margin: 0;
+	height: auto;
+	
+	}
+	#about-us{
+	font-size: 16px;
+	font-weight: 100;
+	line-height: normal;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+}
+.section2 img {
+
+ height: auto;
+  
+
+}
+
+	.left  {width: 100%;}
+	.right {width: 100%;}
+}
